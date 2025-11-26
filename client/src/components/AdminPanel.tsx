@@ -31,13 +31,15 @@ export default function AdminPanel({ onCreate }: {
   }
 
   return (
-    <form onSubmit={submit} style={{ display: 'grid', gap: 8 }}>
-      <input value={team1} onChange={e => setTeam1(e.target.value)} placeholder="Team 1" disabled={loading} />
-      <input value={team2} onChange={e => setTeam2(e.target.value)} placeholder="Team 2" disabled={loading} />
-      <button type="submit" disabled={loading}>{loading ? 'Adding...' : 'Add Match'}</button>
-      {error && <p style={{ color: '#c00', margin: 0 }}>{error}</p>}
-      {done && !error && <p style={{ color: '#0a7', margin: 0 }}>Match added.</p>}
-      <p style={{ color: '#666', margin: 0, fontSize: 12 }}>Tip: live list updates via SSE.</p>
+    <form onSubmit={submit} className="card" style={{ display: 'grid', gap: 10 }}>
+      <input className="input" value={team1} onChange={e => setTeam1(e.target.value)} placeholder="Team 1" disabled={loading} />
+      <input className="input" value={team2} onChange={e => setTeam2(e.target.value)} placeholder="Team 2" disabled={loading} />
+      <div className="row">
+        <button type="submit" className="btn btn-primary" disabled={loading}>{loading ? 'Adding…' : 'Add Match'}</button>
+        {error && <p className="status-error">{error}</p>}
+        {done && !error && <p className="status-success">Match added.</p>}
+      </div>
+      <p className="muted" style={{ margin: 0, fontSize: 12 }}>Tip: live list updates via SSE.</p>
     </form>
   )
 }
