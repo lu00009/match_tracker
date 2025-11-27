@@ -51,7 +51,6 @@ Open:
 - Server: `dev`, `build`, `start`
 - Client: `dev`, `build`, `preview`
 
-  https://github.com/user-attachments/assets/2c098ede-9c38-44cd-9564-42f5715396e3
-
+https://github.com/user-attachments/assets/58ebbb41-a405-4b21-bd0c-648a746b673f
 ## License
 MIT
